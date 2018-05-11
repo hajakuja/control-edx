@@ -522,8 +522,11 @@ def csver(csv_val):
         #current = open('./csv_files/current.csv',"w",encoding='utf8',newline='')
         #archive = open('./csv_files/'+str(int(time.time()))+'.csv',"w",encoding='utf8',newline='')
         try:
-            current = open('./csv_files/current.csv',"w",**kwargs)
-            archive = open('./csv_files/'+str(int(time.time()))+'.csv',"w",**kwargs)
+            print('open file 1')
+            current = open('./csv_files/current.csv',"w+",**kwargs)
+            print('open 1 file')
+            archive = open('./csv_files/'+str(int(time.time()))+'.csv',"w+",**kwargs)
+            print('open file 2')
             csv_default = csv.writer(archive)
             csv_recent = csv.writer(current)
             csvLock.acquire() 
@@ -533,8 +536,11 @@ def csver(csv_val):
             csvLock.release()
             csv_yn = 1
             print ('CSV File Open successful')
-        except:
-            print("Failed to open CSV Files")
+        except IOError as exc:    # Python 2. For Python 3 use OSError
+            tb = sys.exc_info()[-1]
+            lineno = tb.tb_lineno
+            filename = tb.tb_frame.f_code.co_filename
+            print('{} at {} line {}.'.format(exc.strerror, filename, lineno))
                 
 @socketio.on('serial connect request')
 def connection(already_built):

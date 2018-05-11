@@ -2,7 +2,7 @@
 // Arduino Code for the Motor Speed Control Lab
 
 // Likely User Modified Variables ******************************
-unsigned long deltaT = 20000; // time between samples (usecs) 1000->50000
+unsigned long deltaT = 10000; // time between samples (usecs) 1000->50000
 
 
 // End Likely User Modified Variables***************************
