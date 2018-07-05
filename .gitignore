@@ -1766,3 +1766,6 @@
 6302View_v5c/env/lib/python3.6/site-packages/wheel-0.31.1.dist-info/WHEEL
 6302View_v5c/env/lib/python3.6/site-packages/wheel-0.31.1.dist-info/entry_points.txt
 6302View_v5c/env/lib/python3.6/site-packages/wheel-0.31.1.dist-info/top_level.txt
+.vscode/arduino.json
+.vscode/c_cpp_properties.json
+.vscode/launch.json
