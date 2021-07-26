@@ -1,6 +1,7 @@
 *.zip
 .DS_Store
 *teensy*
+6302View_v5c/env/*
 6302View_v5c/env/bin/activate
 6302View_v5c/env/pip-selfcheck.json
 6302View_v5c/env/bin/activate.csh
