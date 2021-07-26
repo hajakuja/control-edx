@@ -224,7 +224,7 @@ $(document).on('pageinit', function() {
 
     //Handle sockets with server:
  
-    var socket = io('http://localhost:3000');
+    var socket = io();
 
     //Server sending socket containing list of valid serial ports:
     socket.on('serial list display', function(portlist){
